@@ -18,4 +18,17 @@ class List{
 		void traverse();
 		void remove(int data);
 		void removeFromHead();
+		bool search(int data);
 };
+/*class Stack{
+	private:
+		List l;
+	public:
+		void push(int data){
+			l.addToHead(data);
+		}
+		int pop(){
+			return l.removeFromHead();
+			
+		}
+};*/

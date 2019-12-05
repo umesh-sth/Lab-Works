@@ -81,6 +81,26 @@ void List::remove(int data){
 			
 }
 
+bool List::search(int data){
+		if (HEAD==NULL && TAIL == NULL)
+			return false;
+		Node* temp;
+		temp= HEAD;
+		while (temp!=NULL){
+			if (temp->info == data){
+				cout<<"Search FOUND";
+				return true;
+			}
+			else{
+				temp= temp->next;
+				
+			}
+			
+		}
+		return false;
+	
+}
+
 
 int main(){
 	List list1;
@@ -88,7 +108,7 @@ int main(){
 	list1.addToHead(55);
 	list1.addToHead(6);
 	list1.addToHead(5);
-	//list1.addToHead(8);
+	list1.addToHead(15);
 	list1.remove(55);
 	
 	//list1.traverse();
