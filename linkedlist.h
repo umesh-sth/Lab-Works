@@ -15,5 +15,7 @@ class List{
 		//functions
 		bool isEmpty();
 		void addToHead(int data);
-		void traverse();	
+		void traverse();
+		void remove(int data);
+		void removeFromHead();
 };
