@@ -13,22 +13,46 @@ class List{
 		~List();
 	
 		//functions
+		
 		bool isEmpty();
 		void addToHead(int data);
 		void traverse();
 		void remove(int data);
-		void removeFromHead();
+		int removeFromHead();
 		bool search(int data);
+		void addToTail(int data);
+		void add(int data, Node* predessor);
+		bool retrieve ( int data, Node* &outputptr);
 };
-/*class Stack{
+class Stack{
 	private:
 		List l;
 	public:
 		void push(int data){
 			l.addToHead(data);
 		}
-		int pop(){
+		int top(){
 			return l.removeFromHead();
 			
+			
 		}
-};*/
+		int pop();
+			
+			
+		
+};
+class Queue{
+	private:
+		List l;
+	public:
+		void enqueue(int data){
+			l.addToHead(data);
+		}
+		void dequeue (){
+			l.removeFromHead();
+			
+		}
+		void showitems(){
+			l.traverse();
+		}
+};
