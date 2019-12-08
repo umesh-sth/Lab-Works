@@ -48,6 +48,11 @@ int List::removeFromHead(){
 	return num;
 }
 
+int List::showHead(){
+	int num = HEAD->info;
+	return num;
+}
+
 void List::remove(int data){
 		if (HEAD==NULL && TAIL == NULL)
 			return;
@@ -129,13 +134,7 @@ bool List::retrieve(int data, Node * &outputptr) {
 		return true;
 	}
 }
-/*int Stack::pop(){
-	Node* nodeToDelete;
-	nodeToDelete = ;
-	int num = TAIL->info;
-	TAIL = NULL;
-	return num;
-}*/
+
 int main(){
 	Node* ptr = new Node();
 	List list1;
@@ -155,16 +154,15 @@ int main(){
 	list1.retrieve(6, ptr);
 	list1.add(7, ptr);
 	list1.traverse();
-	
+	//cout<<list1.removeFromTail();
 //IMPLEMETING STACK 
 	cout<<" STACK  /n Implementing stack:"<<endl;
 	Stack stack;
-	for(int i=0;i<12;i+=2)
+	for(int i=2;i<10;i+=2)
 		stack.push(i);
-	stack.top();
-
-	//int a =stack.pop();
-	//cout<<a<<endl;
+	cout<<stack.top()<<endl;
+	cout<<stack.pop()<<endl;
+	cout<<stack.pop()<<endl;
 	
 //implementing queue
 	cout<<"Queue Implementation:"<<endl;

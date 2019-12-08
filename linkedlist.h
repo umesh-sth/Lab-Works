@@ -23,6 +23,7 @@ class List{
 		void addToTail(int data);
 		void add(int data, Node* predessor);
 		bool retrieve ( int data, Node* &outputptr);
+		int showHead();
 };
 class Stack{
 	private:
@@ -32,11 +33,13 @@ class Stack{
 			l.addToHead(data);
 		}
 		int top(){
-			return l.removeFromHead();
+			return l.showHead();
 			
 			
 		}
-		int pop();
+		int pop(){
+			l.removeFromHead();
+		}
 			
 			
 		
