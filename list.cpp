@@ -13,10 +13,13 @@ List::List(){
 List::~List(){}
 
 bool List::isEmpty(){
-	if (HEAD==NULL && TAIL == NULL)
-		cout<<"EMPTY LIST"<<endl;
+	if (HEAD==NULL && TAIL == NULL){
+		return true;
+	}
 	else
-		cout<<"NOT EMPTY"<<endl;
+	{
+		return false;
+		}
 }
 
 void List::addToHead(int data){
@@ -141,7 +144,11 @@ int main(){
 	for (int i = 10; i <= 20; i += 2) {
 		list1.addToHead(i);
 	}
-	list1.isEmpty();
+	if(list1.isEmpty()==true)
+		cout<<"LISt Empty"<<endl;
+	else
+		cout<<"Not empty"<<endl;
+	
 	list1.addToHead(55);
 	list1.addToHead(6);
 	list1.addToHead(5);
@@ -158,19 +165,23 @@ int main(){
 //IMPLEMETING STACK 
 	cout<<" STACK  /n Implementing stack:"<<endl;
 	Stack stack;
+	stack.isEmpty();
 	for(int i=2;i<10;i+=2)
 		stack.push(i);
 	cout<<stack.top()<<endl;
+	cout<<stack.top()<<endl;
 	cout<<stack.pop()<<endl;
 	cout<<stack.pop()<<endl;
-	
+	stack.isEmpty();
 //implementing queue
 	cout<<"Queue Implementation:"<<endl;
 	Queue queue;
+	queue.isEmpty();
 	queue.enqueue(102);
 	queue.enqueue(103);
 	queue.enqueue(104);
 	queue.dequeue();
+	queue.isEmpty();
 	queue.showitems();
 	
 	

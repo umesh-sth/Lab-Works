@@ -1,3 +1,4 @@
+#include<iostream>
 class Node{
 	 public:
 	int info;
@@ -29,6 +30,13 @@ class Stack{
 	private:
 		List l;
 	public:
+		void isEmpty(){
+			bool a = l.isEmpty();
+			if(a==true)
+			std::cout<<"Stack Empty"<<std::endl;
+			else
+			std::cout<<"Stack NOT EMpty!"<<std::endl;
+		}
 		void push(int data){
 			l.addToHead(data);
 		}
@@ -48,6 +56,14 @@ class Queue{
 	private:
 		List l;
 	public:
+		void isEmpty(){
+			bool a = l.isEmpty();
+			if(a==true)
+			std::cout<<"Queue Empty"<<std::endl;
+			else
+			std::cout<<"Queue NOT EMpty!"<<std::endl;
+			
+		}
 		void enqueue(int data){
 			l.addToHead(data);
 		}
